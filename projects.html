@@ -1,0 +1,213 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Naziia Raitova's Personal Website</title>
+    <link rel="icon" href="images/icon2.png" />
+</head>
+<style>
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Georgia', sans-serif;
+}
+
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 50px;
+   background-color: #F1F1EF;
+   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+   font-weight: 500;
+}
+
+footer{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 50px 325px;
+   background-color: #F1F1EF;
+   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+   font-weight: 500;
+}
+
+.stripe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(to bottom right, transparent 50%, black 50%);
+   transform: skewY(-5deg);
+}
+
+.content {
+   position: relative;
+   z-index: 1;
+   padding: 20px;
+   max-width: 800px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+nav {
+    text-align: center;
+    font-size: 18px;
+}
+
+.logo {
+   font-size: 24px;
+}
+
+nav a {
+   margin: 0 10px;
+   text-decoration: none;
+   color: #333;
+}
+
+/* new */
+.container {
+   display: flex;
+   justify-content: space-between;
+   padding: 20px;
+   flex-wrap: wrap;
+}
+
+.head {
+   font-size: 70px;
+   font-weight: 500;
+   padding: 60px 40px 40px 40px;
+   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+}
+
+.project {
+   width: 30%;
+   /* display: flex; */
+   align-items: center;
+   padding:20px;
+   margin: 20px 0px;
+   /* box-sizing: border-box;
+    border: 1px solid black;  */
+}
+
+/* .project-image {
+   width: 100%;
+   height: 200px;
+   background-color: #ccc;
+   margin-bottom: 10px;
+} */
+
+.project-description {
+   text-align: left;
+}
+
+a {
+    color: inherit; /* Use the color inherited from the parent */
+}
+
+.project-description p {
+   font-size: 15px;
+   line-height: 1.5;
+}
+
+.project-title {
+   font-size: 20px;
+   font-weight: 500;
+   margin-bottom: 10px;
+   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+}
+
+.git {
+   display: inline-block;
+   padding: 17px 30px;
+   background-color: white;
+   color: black;
+   font-size: 23px;
+   text-decoration: none;
+   border-radius: 50px;
+   border-color: black;
+   border: none;
+   cursor: pointer;
+   border: 2px solid black; /* Set the border */
+   margin: 20px 40px 100px 40px;
+}
+
+.git:hover {
+   background-color: black;
+   color: white;
+}
+
+</style>
+<body>
+    <header>
+       <div class="logo">personal portfolio</div>
+       <nav>
+           <a href="index.html">Home</a>
+           <a href="projects.hrml" style="text-decoration: underline; text-underline-offset: 0.5em;">Projects</a>
+           <a href="resume.html">Resume</a>
+       </nav>
+   </header>
+   <div class="head">Projects.</div>
+   <div class="container">
+       <div class="project">
+           <!-- <div class="project-image">Projects</div> -->
+           <div class="project-description">
+               <div class="project-title">16-bit multi-cycle processor</div>
+               <p>The project involves designing a compact instruction set general-purpose processor capable of executing programs stored externally. Our team undertook the entire process from conceptualization to testing, debugging, and performance assessment. This includes documentation maintenance and periodic presentations. The project aimed to cultivate skills in abstraction, instruction set architecture design, hardware implementation, and teamwork.
+               </p>
+               <a href="https://github.com/rhit-csse232/rhit-csse232-2324b-project-lime-2324b-02">Implementation</a>
+           </div>
+       </div>
+       <div class="project">
+           <!-- <div class="project-image">Projects</div> -->
+           <div class="project-description">
+               <div class="project-title">Maintenance Tracker</div>
+               <p>I created a web-based application that allows users to track different types of maintenance that is needed for their vehicle. The application includes ways for the user to put all of the information about their car into the system. After they have done that, they are able to view the needed maintenance for their vehicle. The website also displays the parts needed and the projected cost.</p>
+                <a href="https://maintenance-tracker-csse280.web.app/">Website</a>
+            </div>
+       </div>
+       <div class="project">
+           <!-- <div class="project-image">Projects</div> -->
+           <div class="project-description">
+               <div class="project-title">Editor Trees</div>
+               <p>The project entails writing methods for a class representing the underlying data structure of a text editor. Each piece of text is represented as a height-balanced tree with rank and balance codes, where each node contains a single character. This structure, known as an EditTree, focuses on the efficient manipulation of text rather than alphabetical ordering. The emphasis is on implementing complex data structures and associated algorithms, utilizing debugging tools effectively, interpreting algorithm descriptions for Java implementation, and practicing teamwork skills. </p>
+               <a href="https://github.com/rhit-raitovn/Data-Structures-and-Algorithms">Implementation</a>
+            </div>
+       </div>
+       <div class="project">
+           <!-- <div class="project-image">Projects</div> -->
+           <div class="project-description">
+               <div class="project-title">Database Project</div>
+               <p>The project aims to develop a ticket management system prioritizing real fans' access to their favorite musical artist's events and concerts. Unlike existing systems where prices fluctuate based on supply and demand, our system ensures fair access and affordability for fans while providing transparency to artists regarding profits. Additionally, the system may include features for fans to leave concert reviews. The primary objective is to deliver a functional system by the end of spring quarter 2024, enabling fans to access events and providing artists with valuable statistics about their fan base and events.</p>
+            </div>
+       </div>
+       <div class="project">
+           <!-- <div class="project-image">Projects</div> -->
+           <div class="project-description">
+               <div class="project-title">Arcade Game (Joust Advanced)</div>
+               <p>The project involves designing a game inspired by Joust, where a hero on an ostrich must defeat enemy knights riding buzzards by jousting with them. The game features multiple levels with different platform layouts and increasing difficulty. Players control the hero's movement using arrow keys, navigating platforms above a lava pool. Winning requires defeating all enemies while avoiding losing lives.</p>
+               <a href="https://github.com/rhit-raitovn/OOP-Final-Project/tree/main/csse220-fall-2022-23-final-project-f23-a-409-master">Website</a>
+            </div>
+       </div>
+       <div class="project">
+           <!-- <div class="project-image">Projects</div> -->
+           <div class="project-description">
+               <div class="project-title">Artificial Intelligence Work</div>
+               <p>The project involves amplifying the food truck scene in Indiana and launching the FoodX franchise. Tasks include conducting exploratory data analysis on a provided dataset to understand distributions and biases, and suggesting impactful business use cases based on findings. Additionally, considerations of data ethics, business outcomes, and technical implications regarding data collection, storage, and biases are crucial.</p>
+                <a href="https://github.com/rhit-raitovn/Artificial-Intelligence-Work-Prompt">Implementation</a>
+            </div>
+       </div>
+   </div>
+   <a class="git" href="https://www.linkedin.com/in/naziia-raitova/">Github</a>
+   <footer>
+       <div class="logo">Contact Me!</div>
+       <nav>
+           raitovn@rose-hulman.edu<br>
+           (224) 373-4204
+       </nav>
+    </footer>
+</body>
+</html>

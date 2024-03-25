@@ -1,37 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Naziia Raitova's Personal Website</title>
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="icon" href="images/favicon.png" />
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"> -->
-  </head>
-  <body id="about">
-    <header>
-      <h1>Naziia Raitova</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">about</a></li>
-            <li><a href="portfolio.html">portfolio</a></li>
-            <li><a href="resume.html">resume</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h1>Hello, I'm Naziia!</h1>
-        <img src="images/main.jpeg">
-        <p>Hello! My name is Naziia Raitova. I'm an international student from Kyrgyzstan, studying at Rose. I'm majoring in Computer Science. This website serves as a digital showcase of my work, skills, and experiences.</p>
-        <p>At Rose, I serve as the Secretary of the WOLFPAC club and an International Student Mentor. I remain open to discovering new chances in the field of Computer Science and Software Engineering, and I am always eager to engage in discussions about shared interests.</p>
-        <p>I have some fun hobbies that keep me busy and happy. I'm a big fan of winter sports, like skiing and skating; there's something magical about gliding on the ice or racing down snowy slopes. I'm also a huge fan of watching figure skating during the Olympics, and I never miss a performance. When the weather's warmer, I enjoy playing tennis and volleyball with friends. Besides sports, I'm into reading and crime shows, which always keep me on the edge of my seat. And back in the day, I used to love drawing portraits, expressing myself through art.</p>
-    </main>
-    <footer>
-        You can email at raitovn (at) rose-hulman.edu
+    <link rel="icon" href="images/icon2.png" />
+</head>
+<style>
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Georgia', sans-serif;
+}
+
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 50px;
+   background-color: #F1F1EF;
+   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+   font-weight: 500;
+}
+
+footer{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 50px 325px;
+   background-color: #F1F1EF;
+   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+   font-weight: 500;
+}
+
+nav {
+    text-align: center;
+    font-size: 18px;
+}
+
+.logo {
+   font-size: 24px;
+}
+
+nav a {
+   margin: 0 10px;
+   text-decoration: none;
+   color: #333;
+}
+
+.hero {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 90vh;
+   background-color: #c8a47e;
+   justify-content: space-between;
+}
+
+.hero-text {
+   width: 30%;
+   padding: 120px;
+   background-color: #c8a47e;
+}
+
+.hero-text h1 {
+   font-size: 60px;
+   margin-bottom: 50px;
+   /* font-family: 'Neue Haas Grotesk Display Pro', cursive; */
+}
+
+.hero-text p {
+   font-size: 20px;
+   line-height: 1.5;
+   margin-bottom: 50px;
+}
+
+.hero-text a {
+   display: inline-block;
+   padding: 20px 40px;
+   background-color: black;
+   color: #c8a47e;
+   text-decoration: none;
+   border-radius: 50px;
+}
+
+.hero-image {
+   width: 50%;
+   height: 100%;
+   background-image: url('https://i.pinimg.com/564x/5b/2c/95/5b2c95dcf8ac35fa86ef891bd87086f5.jpg');
+   background-size: cover;
+   background-position: center;
+}
+</style>
+<body>
+   <header>
+       <div class="logo">personal portfolio</div>
+       <nav>
+           <a href="index.html" style="text-decoration: underline; text-underline-offset: 0.5em;">Home</a>
+           <a href="projects.html">Projects</a>
+           <a href="resume.html">Resume</a>
+       </nav>
+   </header>
+   <section class="hero">
+       <div class="hero-text">
+           <h1>Naziia Raitova</h1>
+           <h2>RHIT Computer Science '26</h2>
+           <p>Hello! My name is Naziia Raitova. I'm a Computer Science student at Rose-Hulman Institute of Technology. This website serves as a digital showcase of my work, skills, and projects.</p>
+           <a href="https://www.linkedin.com/in/naziia-raitova/">Learn More</a>
+       </div>
+       <div class="hero-image"></div>
+   </section>
+   <footer>
+       <div class="logo">Contact Me!</div>
+       <nav>
+           raitovn@rose-hulman.edu<br>
+           (224) 373-4204
+       </nav>
     </footer>
-    <script src="scripts/main.js"></script>
-  </body>
+</body>
 </html>

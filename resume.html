@@ -1,129 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Resume</title>
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="icon" href="images/favicon.png" />
-  </head>
-  <body id="resume">
+    <title>Naziia Raitova's Personal Website</title>
+    <link rel="icon" href="images/icon2.png" />
+</head>
+<style>
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Georgia', sans-serif;
+}
+
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 50px;
+   background-color: #F1F1EF;
+   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+   font-weight: 500;
+}
+
+footer{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 50px 325px;
+   background-color: #F1F1EF;
+   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+   font-weight: 500;
+}
+
+nav {
+    text-align: center;
+    font-size: 18px;
+}
+
+.logo {
+   font-size: 24px;
+}
+
+nav a {
+   margin: 0 10px;
+   text-decoration: none;
+   color: #333;
+}
+
+.hero {
+   background-color: #f0f0f0;
+   height: 400px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+   font-weight: 500;
+}
+
+.resume {
+   font-size: 5em;
+   margin-bottom: 15px;
+}
+
+.timeline {
+   font-size: 1.2em;
+   line-height: 1.5em;
+   margin: 8px;
+   font-family: 'Georgia', sans-serif;
+}
+
+.sections {
+   margin-top: 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 0px 150px;
+
+}
+
+.course {
+   width: 60%;
+   margin-bottom: 30px;
+}
+
+p {
+    line-height: 1.7;
+}
+
+.h1 {
+   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+   font-weight: 500;
+   font-size: 27px;
+   margin-bottom: 30px;
+}
+
+.h3 {
+   font-size: 1.1rem;
+   font-size: 18px;
+   margin-bottom: 10px;
+   font-weight: bold;
+   margin-bottom: 25px;
+}
+
+.h2 {
+   font-style: italic;
+   font-size: 18px;
+   margin-bottom: 25px;
+}
+
+.h4 {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+</style>
+
+<body>
     <header>
-      <h1>Naziia Raitova</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">about</a></li>
-            <li><a href="portfolio.html">portfolio</a></li>
-            <li><a href="resume.html">resume</a></li>
-        </ul>
-    </nav>
-    <main>
-      <h1>Resume</h1>
-      <h2>Objective</h2>
-      <p>Seeking an internship in the field of Computer Science and Software Engineering</p>
+       <div class="logo">personal portfolio</div>
+       <nav>
+           <a href="index.html">Home</a>
+           <a href="projects.html">Projects</a>
+           <a href="resume.html" style="text-decoration: underline; text-underline-offset: 0.5em;">Resume</a>
+       </nav>
+   </header>
+   <div class="hero">
+       <div class="resume">Resume</div>
+       <p class="timeline">Seeking an internship in the field of Computer Science and Software Engineering</p>
+       <p class="timeline">for Summer 2024</p>
+   </div>
+   <div class="sections">
+       <div class="course">
+           <p class="h1">Education</p>
+           <p class="h3">Bachelor of Science, Computer Science</p>
+           <p class="h2">May 2026 GPA: 3.4/4.0</p>
+           <p class="h4">Rose-Hulman Institute of Technology, Terre Haute, IN</p>
+           <p class="h2">Related Courses: Data Structures & Algorithms, Object-Oriented Programming, Computer Architecture I, II, Digital Systems, Systems Programming, Web Development, Practical Security, Database Systems</p>
+       </div>
+       <div class="course">
+           <p class="h1">Skills</p>
+           <p class="h4"><b>Prog. Languages</b>: Java, Python, HTML, CSS, JavaScript, C, C#, C++, Assembly, SQL, Verilog</p>
+           <p class="h4"><b>Software and Systems</b>: Linux, Windows, MacOS, Eclipse, Visual Studio, Git, Excel, Microsoft Office</p>
+       </div>
+       <div class="course">
+           <p class="h1">Projects</p>
+           <p class="h3">16-bit processor – Implementation</p>
+           <p class="h4">• As a team, we designed a "minuscule instruction set" general-purpose processor capable of executing programs stored in an external memory. Using Verilog, we modeled our design, tested it, debugged it, and assessed its performance<br>• Applied the principle of abstraction in analysis and design problems. Worked effectively as a member of a team</p>
 
-      <h2>Education</h2>
-      <h3><span class="degreeName">Bachelor of Science, Computer Science</span> May 2026 GPA:3.4</h3>
-      <ul>
-        <li>Rose-Hulman Institute of Technology, Terre Haute, IN</li>
-      </ul>
-      <h3>Related Courses:</h3>
-      <ul>
-        <li>Data Structures & Algorithms</li>
-        <li>Object-Oriented Software Development</li>
-        <li>Digital Systems</li>
-        <li>Systems Programming</li>
-        <li>Web Development</li>
-        <li>Practical Security</li>
-      </ul>
-      <h3>Applicable Project Work:</h3>
-      <ul>
-        <li>Projects: Editor Trees – Data Structures & Algorithms</li>
-        <li>Projects: Arcade Game — Joust (Advanced)</li>
-      </ul>
-      <h3>Skills</h3>
-      <dl>
-        <dt>Programming Languages (ordered by experience):</dt>
-        <dd>Java, C#, SQL, AspectJ, PHP, Ruby</dd>
-        <dt>Web-based Languages:</dt>
-        <dd>XML, XSL, (X)HTML, CSS, JavaScript</dd>
-        <dt>Operating Systems:</dt>
-        <dd>Linux (Gentoo), Windows</dd>
-        <dt>Software:</dt>
-        <dd>Photoshop, Eclipse, MS Visual Studio 2005, MS Office Suite, SVN</dd>
-      </dl>
-      <h3>Selected Experience</h3>
-      <!-- <ul>
-        <li>
-          <span class="employer">Rose-Hulman Ventures</span>,
-          <span class="dates">Winter 2006 - Present</span>
-          <span class="title">Quality Assurance Team Leader – DesAcc Project</span>,
-          <span class="location">Terre Haute, Indiana</span>
-          <ul>
-            <li>Lead a five member team in testing and documenting the DesAcc Dicom Access ExplorerTM Photoshop and Acrobat plugins</li>
-          </ul>
-        </li>
-        <li>
-          <span class="employer">ACM SIGCSE/ItiCSE</span>,
-          <span class="dates">Winter 2005- Winter 2006</span>
-          <span class="title">ACM SIGCSE/ ItiCSE Registration Team</span>,
-          <span class="location">Terre Haute, Indiana</span>
-          <ul>
-            <li>Implemented printing capability for all badges, tickets, and receipts within a stand-alone C# application</li>
-            <li>Development of a PHP based conference registration system</li>
-            <li>Assisted in the production and distribution of conference registration materials on location at the SIGCSE conference</li>
-          </ul>
-        </li>
-        <li>
-          <span class="employer">SiteMason</span>,
-          <span class="dates">Summer 2005</span>
-          <span class="title">Intern</span>,
-          <span class="location">Nashville, TN</span>
-          <ul>
-            <li>Made XSLT extension functions and stylesheets for use with the SiteMason CMS</li>
-            <li>Debugged existing XSL stylesheets</li>
-            <li>Provided developer technical support</li>
-          </ul>
-        </li>
-        <li>
-          <span class="employer">Rose-Hulman Institute of Technology, CSSE Department</span>,
-          <span class="dates">Fall 2004 – present</span>
-          <span class="title">Teaching Assistant</span>,
-          <span class="location">Terre Haute, IN</span>
-          <ul>
-            <li>Assisted in class for Database Systems, and Software Development I, II, II honors, and III</li>
-            <li>Administered lab hours for various software development courses</li>
-            <li>Graded assignments and assessed projects written in Java</li>
-          </ul>
-        </li>
-        <li>
-          <span class="employer">CentreSource</span>,
-          <span class="dates">Summer 2004</span>
-          <span class="title">Intern</span>,
-          <span class="location">Nashville, TN</span>
-          <ul>
-            <li>Developed XSLT templates</li>
-            <li>Converted and maintained websites on the SiteMason CMS</li>
-            <li>Updated XSL stylesheets and provided CMS support for Trevecca Nazarene University</li>
-          </ul>
-        </li>
-      </ul> -->
+           <p class="h3">Maintenance Tracker – Website</p>
+           <p class="h4">• Created a web-based application, using HTML, CSS, and JavaScript, that will allow users to track different types of maintenance that is needed for their vehicle<br>• Worked on both front-end and back-end</p>
 
-      <h2>Activities &amp; Honors</h2>
-      <ul>
-        <!-- <li>Dean’s List - Fall Term ’04, Fall Term ‘06</li> -->
-        <li>Computer Science Teaching Assistant</li>
-        <li>WOLFPAC (Women In Computing) Secretary</li>
-        <li>Learning Center Tutor</li>
-        <li>Attended InWIC 2006 and MidWIC 2006</li>
-        <li>International Student Transitions Mentor</li>
-      </ul>
-    </main>
-    <footer>
-        You can email at raitovn (at) rose-hulman.edu
+           <p class="h3">Artificial Intelligence – Work Prompt</p>
+           <p class="h4">• Implemented AI solution for FoodX, enhancing order predictions focusing on ethical data practices<br>• Using Python (matplotlib and numpy), employed a data-driven approach, contributing to enhanced business outcomes and customer satisfaction</p>
+
+           <p class="h3">Editor Trees – Data Structures & Algorithms</p>
+           <p class="h4">• Implemented a height-balanced tree-based data structure for a text editor application in Java<br>• Designed complex data structure and associated algorithms </p>
+
+           <p class="h3">Arcade Game — Joust (Advanced)</p>
+           <p class="h4">• Developed a game in Java with players that can earn points by defeating enemies or collecting eggs<br>• Added two different kinds of enemies, multiple levels, and additional features</p>
+       </div>
+       <div class="course">
+           <p class="h1">Internships</p>
+           <p class="h3">USAID project “Successful Aimak 2” — Intern</p>
+           <p class="h4">• Created and maintained a comprehensive database of project participants, facilitating efficient tracking and reporting of participant information, using SQL and Excel<br>• Collaborated with team members to achieve objectives and contributed to overall success of project </p>
+           <p class="h3">IT Company “Kanda Co” – Assistant of Senior Project Manager</p>
+           <p class="h4">• Coordinated with cross-functional teams to ensure project goals and deadlines were met<br>• Managed project documentation, including schedules, budgets, and progress reports</p>
+        </div>
+       <div class="course">
+           <p class="h1">Leadership</p>
+           <p class="h3">Computer Science OOP Teaching Assistant </p>
+           <p class="h4">• Collaborate with the instructor to improve assessment processes and provided constructive feedback on student assignments, quizzes, and exams</p>
+           <p class="h3">WOLFPAC (Women in Computing) Vice-President </p>
+           <p class="h4">• Facilitate administrative tasks, meetings, and communication, advancing diversity and inclusion in computing</p>
+           <p class="h3">Learning Center Tutor</p>
+           <p class="h4">• Provide individualized tutoring in Calculus and Physics, offering study strategies and test preparation support to enhance student performances</p>
+       </div>
+   </div>
+   <footer>
+       <div class="logo">Contact Me!</div>
+       <nav>
+           raitovn@rose-hulman.edu<br>
+           (224) 373-4204
+       </nav>
     </footer>
-    <script src="scripts/main.js"></script>
-  </body>
-</html>
+</body>

@@ -1,0 +1,369 @@
+
+ html {
+    line-height: 1.15; 
+    -webkit-text-size-adjust: 100%; 
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #f3f0f0;
+
+    padding-left: 8em;
+    height:100%;
+    border:8px solid #ff9d94;
+    position:relative;
+  }
+  
+  main {
+    display: block;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  a {
+    background-color: transparent;
+  }
+  
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  small {
+    font-size: 80%;
+  }
+  
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+  img {
+    border-style: none;
+  }
+  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+  
+  button,
+  input { /* 1 */
+    overflow: visible;
+  }
+
+  button,
+  select { /* 1 */
+    text-transform: none;
+  }
+  
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+  
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+  
+  progress {
+    vertical-align: baseline;
+  }
+
+  textarea {
+    overflow: auto;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+
+  [type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+  }
+
+  
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+  }
+  
+  details {
+    display: block;
+  }
+  
+  summary {
+    display: list-item;
+  }
+  
+  template {
+    display: none;
+  }
+
+  [hidden] {
+    display: none;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Quicksand&display=swap');  
+  :root {
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+
+    --light-color: white;
+    --body-color:#443d3d;
+    --heading-color:#1d314c;
+    --subheading-color: #2885b0;
+    --contrast-color:#FF6F61;
+  }
+
+  h1,h2,h3 {
+    line-height: 1.2;
+    font-family: 'Delius Swash Caps', cursive;
+  }
+
+  header h1, h2 {
+    color: var(--heading-color);
+    font-size: 3em;
+  }
+  h1, h3 {
+    color: var(--subheading-color);
+  }
+
+  a {
+    color: var(--body-color);
+    text-decoration-color: var(--contrast-color);
+  }
+
+  nav {
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  a:hover {
+    color: var(--contrast-color);
+    /* text-decoration-color: var(--body-color); */
+  }
+
+  body#about img {
+    height: 17em;
+    display: inline;
+    margin-right: var(--horizontal-space);
+    border: 1px solid var(--heading-color);
+    box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 74%);
+  }
+
+  @media screen and (min-width: 25em) {
+    body#about img {
+      float: left;
+      margin-bottom: var(--vertical-space);
+    }
+  }
+
+  body {
+    display: grid;
+    grid-template-areas: "nav nav"
+                          "head head"
+                          "main main"
+                          "foot foot";
+    grid-template-columns: auto 4fr;
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  @media screen and (mid-width: 25em) {
+    body {
+      grid-template-areas: "head nav"
+                           "main  main"
+                           "foot foot";
+      grid-template-rows: auto 1fr auto;
+    }
+  
+    body > nav {
+      grid-area: nav;
+      padding-top: var(--vertical-space);
+    }
+  
+    body > nav ul {
+      float: right;
+    }
+  }
+
+  body > * {
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
+  }
+
+  body > header {
+    grid-area: head;
+  }
+
+  body > nav {
+    grid-area: nav;
+  }
+
+  body > main > *:first-child:before {
+    content: "";
+    border-top: 2px solid var(--heading-color);
+    display: block;
+    padding-top: var(--vertical-space);
+  }
+  /* body {
+    min-width: 50em;
+  } */
+
+  body > nav ul {
+    list-style-type: none;
+    margin: 0;
+    line-height: 2.4;
+    padding-left: 0;
+  }
+  body > nav ul li {
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left: 0;
+  }
+
+  body > main {
+    grid-area: main;
+  }
+
+  body > footer {
+    grid-area: foot;
+  }
+
+  header, footer {
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
+  }
+  
+  header h1, footer h1 {
+    margin: 0;
+  }
+
+  main, header {
+    max-width: 50em;
+    /* max-height: 10em; */
+    /* margin: 0; */
+  }
+
+  body#portfolio ul#portfolioItems {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+  }
+
+  body#portfolio ul#portfolioItems h2 {
+    font-size: 40px;
+  }
+
+  @media screen and (min-width: 25em) {
+  body#portfolio ul#portfolioItems li {
+    flex-basis: 48%;
+    padding-right: 2%;
+    }
+  }
+
+  body#portfolio ul#portfolioItems li img {
+    max-width: 100%;
+    margin-left: -0.66em;
+  }
+
+  footer {
+    padding-bottom: 2em;
+  }
+
+  body#portfolio {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 30px;
+  } 
+
