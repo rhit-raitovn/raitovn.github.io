@@ -1,122 +1,298 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Naziia Raitova's Personal Website</title>
     <link rel="icon" href="images/icon2.png" />
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js"></script>
+    <style>
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90vh;
+            background-color: #c8a47e;
+            padding: 0 10%;
+        }
+
+        /* Left Side - Text */
+        .hero-text {
+            width: 45%;
+            color: black;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-buttons a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: black;
+            color: #c8a47e;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .hero-buttons a:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        /* Right Side - Profile Image */
+        .hero-image {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 50%;
+            border: 6px solid white;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .buttons {
+            margin-top: 20px;
+         }
+
+         .btn-secondary {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            border: 2px solid black;
+            color: black;
+            margin-left: 10px;
+         }
+
+         .btn-secondary:hover {
+            background: black;
+            color: white;
+         }
+         .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+         }
+
+         .skill-tag {
+            display: inline-block;
+            padding: 8px 8px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: rgba(255, 255, 255, 0.1); /* Transparent Glass Effect */
+            backdrop-filter: blur(10px);
+            color: black;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+         }
+
+         .skill-tag:nth-child(1) { background: #a7bc78; }  /* Light Teal */
+         .skill-tag:nth-child(2) { background: #b8cec5; }  /* Mint Green */
+         .skill-tag:nth-child(3) { background: #a7bc78; }  /* Light Teal */
+         .skill-tag:nth-child(4) { background: #b8cec5; }  /* Mint Green */
+         .skill-tag:nth-child(5) { background: #a7bc78; }  /* Light Teal */
+
+         /* Hover Effect */
+         .skill-tag:hover {
+            transform: translateY(-3px);
+            box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.2);
+            color: black;
+         }
+
+
+
+    </style>
 </head>
-<style>
-@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
-body {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: 'Georgia', sans-serif;
-}
-
-header{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 30px 50px;
-   background-color: #F1F1EF;
-   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
-   font-weight: 500;
-}
-
-footer{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 50px 325px;
-   background-color: #F1F1EF;
-   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
-   font-weight: 500;
-}
-
-nav {
-    text-align: center;
-    font-size: 18px;
-}
-
-.logo {
-   font-size: 24px;
-}
-
-nav a {
-   margin: 0 10px;
-   text-decoration: none;
-   color: #333;
-}
-
-.hero {
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   height: 90vh;
-   background-color: #c8a47e;
-   justify-content: space-between;
-}
-
-.hero-text {
-   width: 30%;
-   padding: 120px;
-   background-color: #c8a47e;
-}
-
-.hero-text h1 {
-   font-size: 60px;
-   margin-bottom: 50px;
-   /* font-family: 'Neue Haas Grotesk Display Pro', cursive; */
-}
-
-.hero-text p {
-   font-size: 20px;
-   line-height: 1.5;
-   margin-bottom: 50px;
-}
-
-.hero-text a {
-   display: inline-block;
-   padding: 20px 40px;
-   background-color: black;
-   color: #c8a47e;
-   text-decoration: none;
-   border-radius: 50px;
-}
-
-.hero-image {
-   width: 50%;
-   height: 100%;
-   background-image: url('https://i.pinimg.com/564x/5b/2c/95/5b2c95dcf8ac35fa86ef891bd87086f5.jpg');
-   background-size: cover;
-   background-position: center;
-}
-</style>
 <body>
-   <header>
-       <div class="logo">personal portfolio</div>
-       <nav>
-           <a href="index.html" style="text-decoration: underline; text-underline-offset: 0.5em;">Home</a>
-           <a href="projects.html">Projects</a>
-           <a href="resume.html">Resume</a>
-       </nav>
-   </header>
-   <section class="hero">
-       <div class="hero-text">
-           <h1>Naziia Raitova</h1>
-           <h2>RHIT Computer Science '26</h2>
-           <p>Hello! My name is Naziia Raitova. I'm a Computer Science student at Rose-Hulman Institute of Technology. This website serves as a digital showcase of my work, skills, and projects.</p>
-           <a href="https://www.linkedin.com/in/naziia-raitova/">Learn More</a>
-       </div>
-       <div class="hero-image"></div>
-   </section>
-   <footer>
-       <div class="logo">Contact Me!</div>
-       <nav>
-           raitovn@rose-hulman.edu<br>
-           (224) 373-4204
-       </nav>
-    </footer>
+    <header>
+        <div class="logo">Personal Portfolio</div>
+        <nav>
+            <a href="index.html" style="text-decoration: underline; text-underline-offset: 0.5em;">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Naziia Raitova</h1>
+            <h2>Rose-Hulman Computer Science '26</h2>
+            <p>Hi! My name is Naziia. 
+               I'm passionate about software engineering, AI, and problem-solving. I enjoy building innovative solutions that make a real impact. 
+               Whether it's machine learning, web development, or systems programming, I love taking on challenges that push my skills further.</p>
+            
+            <!-- Skill Tags -->
+            <div class="skill-tags">
+                <span class="skill-tag">Software Design</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Full Stack Development</span>
+                <span class="skill-tag">Systems Programming</span>
+                <span class="skill-tag">Web Development</span>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="projects.html">See My Work</a>
+                <a href="#" onclick="scrollToFooter()">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/profile-pic.jpg" alt="Naziia Raitova Profile Picture">
+        </div>
+    </section>
+
+    <div class="skills-container">
+    <div class="skills-rating">
+        <h3>How I would rate my ability</h3>
+        <div class="skills-list">
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg green" data-percent="95"></circle>
+                    <text x="50" y="55" class="percent">95%</text>
+                </svg>
+                <p>Java</p>
+            </div>
+
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg green" data-percent="95"></circle>
+                    <text x="50" y="55" class="percent">95%</text>
+                </svg>
+                <p>Python</p>
+            </div>
+
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg green" data-percent="80"></circle>
+                    <text x="50" y="55" class="percent">80%</text>
+                </svg>
+                <p>SQL</p>
+            </div>
+
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg green" data-percent="80"></circle>
+                    <text x="50" y="55" class="percent">80%</text>
+                </svg>
+                <p>JavaScript</p>
+            </div>
+
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg green" data-percent="80"></circle>
+                    <text x="50" y="55" class="percent">80%</text>
+                </svg>
+                <p>HTML & CSS</p>
+            </div>
+
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg yellow" data-percent="60"></circle>
+                    <text x="50" y="55" class="percent">60%</text>
+                </svg>
+                <p>Machine Learning</p>
+            </div>
+
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg yellow" data-percent="60"></circle>
+                    <text x="50" y="55" class="percent">60%</text>
+                </svg>
+                <p>TypeScript</p>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="projects.html" class="btn-secondary">View All Projects</a>
+        </div>
+    </div>
+    
+    <div class="skills-summary">
+        <h3>Where am I now?</h3>
+        <p>I’m currently in school, finishing up my junior year at Rose-Hulman this spring quarter.</p>
+        <p>Looking forward to new challenges and opportunities as I head into my senior year! 😊</p>
+    </div>
+   </div>
+
+    <footer id="contact-footer">
+      <h2>Contact Me!</h2>
+      <!-- <hr class="footer-line"> -->
+      <div class="footer-container">
+         <div class="footer-icons">
+            <a href="mailto:raitovn@rose-hulman.edu" target="_blank">
+                  <img src="images/mail-icon.png" alt="Email" class="icon">
+            </a>
+            <a href="https://github.com/rhit-raitovn" target="_blank">
+                  <img src="images/github-icon.png" alt="GitHub" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/naziia-raitova" target="_blank">
+                  <img src="images/linkedin-icon2.png" alt="LinkedIn" class="icon">
+            </a>
+         </div>
+         <p><a href="mailto:raitovn@rose-hulman.edu">raitovn@rose-hulman.edu</a></p>
+         <p>(224) 373-4204</p>
+      </div>
+   </footer>
 </body>
 </html>

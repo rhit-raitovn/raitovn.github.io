@@ -4,143 +4,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Naziia Raitova's Personal Website</title>
     <link rel="icon" href="images/icon2.png" />
-</head>
-<style>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js"></script>
+    <style>
+
 @import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
-body {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: 'Georgia', sans-serif;
+
+/* Internship Container - Clean Grid Layout */
+.int-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px; /* Space between the cards */
+    justify-content: center;
+    padding: 20px;
+    max-width: 1500px;
+    margin: 0 auto; /* Centers the container */
 }
 
-header{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 30px 50px;
-   background-color: #F1F1EF;
-   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
-   font-weight: 500;
+/* Internship Cards */
+.internship {
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 650px; /* Keeps a good width */
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-left: 6px solid #3b8070; /* Left accent border */
 }
 
-footer{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 50px 325px;
-   background-color: #F1F1EF;
-   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
-   font-weight: 500;
+/* Fun Hover Effects */
+.internship:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.15);
+    border-left: 6px solid #2a5f50; /* Darker accent on hover */
 }
 
-.stripe {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background: linear-gradient(to bottom right, transparent 50%, black 50%);
-   transform: skewY(-5deg);
+/* Internship Title */
+.internship h3 {
+    font-size: 22px;
+    color: #3b8070;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.content {
-   position: relative;
-   z-index: 1;
-   padding: 20px;
-   max-width: 800px;
-   margin: 0 auto;
-   text-align: center;
+/* Company & Date Info */
+.internship p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
 }
 
-nav {
-    text-align: center;
-    font-size: 18px;
+/* Internship List Styling */
+.internship ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-.logo {
-   font-size: 24px;
+.internship li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
 }
 
-nav a {
-   margin: 0 10px;
-   text-decoration: none;
-   color: #333;
+/* Custom Bullet Point */
+.internship li::before {
+    content: "🔹"; /* Cool bullet icon */
+    position: absolute;
+    left: 0;
+    color: #3b8070;
+    font-weight: bold;
 }
 
-/* new */
-.container {
-   display: flex;
-   justify-content: space-between;
-   padding: 20px;
-   flex-wrap: wrap;
+/* Highlight Tech Stack & Skills */
+.internship li strong {
+    color: #2a5f50;
+    font-weight: bold;
+    background: rgba(59, 128, 112, 0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-style: italic;
 }
 
-.head {
-   font-size: 70px;
-   font-weight: 500;
-   padding: 60px 40px 40px 40px;
-   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+.buttons {
+    margin-top: 20px;
 }
 
-.project {
-   width: 30%;
-   /* display: flex; */
-   align-items: center;
-   padding:20px;
-   margin: 20px 0px;
-   /* box-sizing: border-box;
-    border: 1px solid black;  */
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #3b8070;
+    color: #3b8070;
+    margin-left: 10px;
 }
 
-/* .project-image {
-   width: 100%;
-   height: 200px;
-   background-color: #ccc;
-   margin-bottom: 10px;
-} */
-
-.project-description {
-   text-align: left;
+.btn-secondary:hover {
+    background: #3b8070;
+    color: white;
 }
 
-a {
-    color: inherit; /* Use the color inherited from the parent */
-}
 
-.project-description p {
-   font-size: 15px;
-   line-height: 1.5;
-}
 
-.project-title {
-   font-size: 20px;
-   font-weight: 500;
-   margin-bottom: 10px;
-   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
-}
+    </style>
+</head>
 
-.git {
-   display: inline-block;
-   padding: 17px 30px;
-   background-color: white;
-   color: black;
-   font-size: 23px;
-   text-decoration: none;
-   border-radius: 50px;
-   border-color: black;
-   border: none;
-   cursor: pointer;
-   border: 2px solid black; /* Set the border */
-   margin: 20px 40px 100px 40px;
-}
-
-.git:hover {
-   background-color: black;
-   color: white;
-}
-
-</style>
 <body>
     <header>
        <div class="logo">personal portfolio</div>
@@ -153,61 +133,332 @@ a {
    <div class="head">Projects.</div>
    <div class="container">
        <div class="project">
-           <!-- <div class="project-image">Projects</div> -->
            <div class="project-description">
                <div class="project-title">16-bit multi-cycle processor</div>
+               <div class="project-tech">Verilog, ARM</div>
                <p>The project involves designing a compact instruction set general-purpose processor capable of executing programs stored externally. Our team undertook the entire process from conceptualization to testing, debugging, and performance assessment. This includes documentation maintenance and periodic presentations. The project aimed to cultivate skills in abstraction, instruction set architecture design, hardware implementation, and teamwork.
                </p>
-               <a href="https://github.com/rhit-csse232/rhit-csse232-2324b-project-lime-2324b-02">Implementation</a>
+               <div</div>
+               <a href="https://github.com/rhit-raitovn/16-bit-multi-cycle-processor" target="_blank">Implementation</a>
            </div>
        </div>
+
        <div class="project">
-           <!-- <div class="project-image">Projects</div> -->
+           <div class="project-description">
+               <div class="project-title">Java Linter</div>
+               <div class="project-tech">Java, PlantUML</div>
+               <p>The linter is designed to recognize design patterns, perform style checks, and identify principle violations to improve code quality. It must support modular functions, produce clear output, and use flexible libraries for adaptability. The system will include 5 checks for design patterns, coding style, and principle violations, with a possible configuration file for customization. Team goals include structured design, efficient coding, and adherence to project requirements, while individuals must ensure completion of assigned checks and maintain coding standards with clear naming conventions and comments.</p>
+                <a href="https://github.com/rhit-raitovn/Java-Linter" target="_blank">Implementation & Demo</a>
+            </div>
+       </div>
+
+       <div class="project">
+           <div class="project-description">
+               <div class="project-title">Scheme Interpreter</div>
+               <div class="project-tech">Racket</div>
+               <p>A Scheme interpreter using Continuation-Passing Style (CPS) and recursion evaluates expressions by explicitly passing control through continuation functions. Instead of returning values directly, each function calls its continuation with the result, allowing for non-standard control flows like tail-call optimization and first-class continuations. The interpreter recursively processes expressions, handling variables, functions, conditionals, and macros while ensuring efficient execution without stack overflow issues.</p>
+                <a href="https://github.com/rhit-raitovn/Programming-Language-Concepts/tree/main/Interpreter" target="_blank">Implementation</a>
+            </div>
+       </div>
+
+       <div class="project">
+           <div class="project-description">
+               <div class="project-title">Dependency Health Visualizer</div>
+               <div class="project-tech">R, TypeScript, Python</div>
+               <p>The Dependency Health Visualizer is a tool designed to analyze and visualize Node.js dependency trees, helping developers identify vulnerable or unreliable packages. It assigns health scores to dependencies using a machine learning regression model trained on key package attributes. The tool represents dependencies in an interactive, color-coded tree graph, making it easy to assess package relationships and risks at a glance. It features subtree navigation, scalable visualization, and intuitive interaction, allowing users to explore dependencies without information overload. The system processes npm package data, extracts relevant information through web scraping, and structures it into a tree format. </p>
+                <a href="https://github.com/Software-Program-Understanding-Team-1/ProjectRepo" target="_blank">Implementation</a>
+            </div>
+       </div>
+
+       <div class="project">
            <div class="project-description">
                <div class="project-title">Maintenance Tracker</div>
+               <div class="project-tech">HTML, CSS, JavaScript, Frameworks</div>
                <p>I created a web-based application that allows users to track different types of maintenance that is needed for their vehicle. The application includes ways for the user to put all of the information about their car into the system. After they have done that, they are able to view the needed maintenance for their vehicle. The website also displays the parts needed and the projected cost.</p>
-                <a href="https://maintenance-tracker-csse280.web.app/">Website</a>
+                <a href="https://maintenance-tracker-csse280.web.app/" target="_blank">Website</a>
             </div>
        </div>
        <div class="project">
-           <!-- <div class="project-image">Projects</div> -->
            <div class="project-description">
                <div class="project-title">Editor Trees</div>
+               <div class="project-tech">Java (Algorithms)</div>
                <p>The project entails writing methods for a class representing the underlying data structure of a text editor. Each piece of text is represented as a height-balanced tree with rank and balance codes, where each node contains a single character. This structure, known as an EditTree, focuses on the efficient manipulation of text rather than alphabetical ordering. The emphasis is on implementing complex data structures and associated algorithms, utilizing debugging tools effectively, interpreting algorithm descriptions for Java implementation, and practicing teamwork skills. </p>
-               <a href="https://github.com/rhit-raitovn/Data-Structures-and-Algorithms">Implementation</a>
+               <a href="https://github.com/rhit-raitovn/Data-Structures-and-Algorithms" target="_blank">Implementation</a>
             </div>
        </div>
        <div class="project">
-           <!-- <div class="project-image">Projects</div> -->
            <div class="project-description">
                <div class="project-title">Database Project</div>
+               <div class="project-tech">SQL, Java</div>
                <p>The project aims to develop a ticket management system prioritizing real fans' access to their favorite musical artist's events and concerts. Unlike existing systems where prices fluctuate based on supply and demand, our system ensures fair access and affordability for fans while providing transparency to artists regarding profits. Additionally, the system may include features for fans to leave concert reviews. The primary objective is to deliver a functional system by the end of spring quarter 2024, enabling fans to access events and providing artists with valuable statistics about their fan base and events.</p>
+               <a href="https://github.com/rhit-raitovn/Database-Project-MusicTix" target="_blank">Implementation</a>
             </div>
        </div>
        <div class="project">
-           <!-- <div class="project-image">Projects</div> -->
            <div class="project-description">
                <div class="project-title">Arcade Game (Joust Advanced)</div>
+               <div class="project-tech">Java (OOP)</div>
                <p>The project involves designing a game inspired by Joust, where a hero on an ostrich must defeat enemy knights riding buzzards by jousting with them. The game features multiple levels with different platform layouts and increasing difficulty. Players control the hero's movement using arrow keys, navigating platforms above a lava pool. Winning requires defeating all enemies while avoiding losing lives.</p>
-               <a href="https://github.com/rhit-raitovn/OOP-Final-Project/tree/main/csse220-fall-2022-23-final-project-f23-a-409-master">Website</a>
+               <a href="https://github.com/rhit-raitovn/OOP-Final-Project/tree/main/csse220-fall-2022-23-final-project-f23-a-409-master" target="_blank">Website</a>
             </div>
        </div>
        <div class="project">
-           <!-- <div class="project-image">Projects</div> -->
            <div class="project-description">
                <div class="project-title">Artificial Intelligence Work</div>
+               <div class="project-tech">Python</div>
                <p>The project involves amplifying the food truck scene in Indiana and launching the FoodX franchise. Tasks include conducting exploratory data analysis on a provided dataset to understand distributions and biases, and suggesting impactful business use cases based on findings. Additionally, considerations of data ethics, business outcomes, and technical implications regarding data collection, storage, and biases are crucial.</p>
-                <a href="https://github.com/rhit-raitovn/Artificial-Intelligence-Work-Prompt">Implementation</a>
+                <a href="https://github.com/rhit-raitovn/Artificial-Intelligence-Work-Prompt" target="_blank">Implementation</a>
             </div>
        </div>
    </div>
-   <a class="git" href="https://www.linkedin.com/in/naziia-raitova/">Github</a>
-   <footer>
-       <div class="logo">Contact Me!</div>
-       <nav>
-           raitovn@rose-hulman.edu<br>
-           (224) 373-4204
-       </nav>
-    </footer>
+   <a class="git" href="https://github.com/rhit-raitovn" target="_blank">Github</a>
+
+   <div class="head">Skills.</div>
+   <div class="skills-container">
+    <div class="skills-rating">
+        <h3>How I would rate my ability</h3>
+        <div class="skills-list">
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg green" data-percent="95"></circle>
+                    <text x="50" y="55" class="percent">95%</text>
+                </svg>
+                <p>Java</p>
+            </div>
+
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg green" data-percent="95"></circle>
+                    <text x="50" y="55" class="percent">95%</text>
+                </svg>
+                <p>Python</p>
+            </div>
+
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg green" data-percent="80"></circle>
+                    <text x="50" y="55" class="percent">80%</text>
+                </svg>
+                <p>SQL</p>
+            </div>
+
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg green" data-percent="80"></circle>
+                    <text x="50" y="55" class="percent">80%</text>
+                </svg>
+                <p>JavaScript</p>
+            </div>
+
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg green" data-percent="80"></circle>
+                    <text x="50" y="55" class="percent">80%</text>
+                </svg>
+                <p>HTML & CSS</p>
+            </div>
+
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg yellow" data-percent="60"></circle>
+                    <text x="50" y="55" class="percent">60%</text>
+                </svg>
+                <p>Machine Learning</p>
+            </div>
+
+            <div class="skill">
+                <svg viewBox="0 0 100 100" class="progress">
+                    <circle cx="50" cy="50" r="45" class="bg"></circle>
+                    <circle cx="50" cy="50" r="45" class="fg yellow" data-percent="60"></circle>
+                    <text x="50" y="55" class="percent">60%</text>
+                </svg>
+                <p>TypeScript</p>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="resume.html" class="btn-secondary">View Resume</a>
+        </div>
+    </div>
+    
+    <div class="skills-summary">
+        <h3>Where am I now?</h3>
+        <p>I’m currently in school, finishing up my junior year at Rose-Hulman this spring quarter.</p>
+        <p>Looking forward to new challenges and opportunities as I head into my senior year! 😊</p>
+    </div>
+   </div>
+
+
+
+      <div class="head">Internships.</div>
+      <div class="int-container">
+         <div class="internship">
+            <h3>Software Engineering Intern</h3>
+            <p><strong>📍 Rose-Hulman Ventures | May 2024 - Aug 2024 | On-site</strong></p>
+            <ul>
+               <li>Developed a machine learning model for 3D spine reconstruction from CT scans.</li>
+               <li>Designed and implemented a real-world coordinate tracking system for real-time patient monitoring.</li>
+               <li>Created detailed visualizations for surgical planning to enhance precision.</li>
+               <li>Worked on CUDA-accelerated deep learning models (ReconstructionGAN, CropGAN).</li>
+               <li><strong>Tech Stack:</strong> Python, CUDA, PyTorch, TensorFlow, 3D Slicer, Medical Imaging.</li>
+            </ul>
+         </div>
+
+         <div class="internship">
+            <h3>Backend Development Mentor</h3>
+            <p><strong>📍 GeeckTech Company | May 2023 - Aug 2023 | Part-time</strong></p>
+            <ul>
+               <li>Mentored 30+ beginner students in backend development and programming fundamentals.</li>
+               <li>Reviewed and revised students’ projects, ensuring clean code and best practices.</li>
+               <li>Led sessions on database management, API design, and server-side programming.</li>
+               <li><strong>Key Skills:</strong> Communication, Leadership, Backend Development.</li>
+            </ul>
+         </div>
+
+         <div class="internship">
+            <h3>USAID Data Intern</h3>
+            <p><strong>📍 USAID | May 2022 - Aug 2022 | Internship</strong></p>
+            <ul>
+               <li>Created and maintained a comprehensive database of project participants, facilitating efficient tracking and reporting of participant information.</li>
+               <li>Utilized SQL and Excel to manage and analyze large datasets, improving project efficiency.</li>
+               <li>Collaborated with team members to achieve objectives and contribute to overall project success.</li>
+               <li><strong>Key Skills:</strong> SQL, Data Management, Team Collaboration.</li>
+            </ul>
+         </div>
+
+         <div class="internship">
+            <h3>Project Manager Intern</h3>
+            <p><strong>📍 Kanda Co | Feb 2022 - May 2022 | Internship</strong></p>
+            <ul>
+               <li>Assisted in project coordination by scheduling meetings, taking notes, and documenting progress.</li>
+               <li>Ensured effective team communication and workflow organization.</li>
+               <li>Maintained project timelines and ensured deliverables were met.</li>
+               <li><strong>Key Skills:</strong> Project Management, Leadership, Organizational Skills.</li>
+            </ul>
+         </div>
+
+      </div>
+
+
+   <div class="head">Courses.</div>
+   <div class="course-container">
+      <div class="course-grid">
+         
+         <div class="course">
+               <h3>Math and Physics</h3>
+                <ul class="single-column">
+                  <li>Theory of Computation</li>
+                  <li>Combinatorics</li>
+                  <li>Intro Probability with Application to Statistics</li>
+                  <li>Engineering Statistics</li>
+                  <li>Matrix Algebra & Differential Equations I</li>
+                  <li>Introduction to Proofs</li>
+                  <li>Calculus I, II, III</li>
+                  <li>Physics I, II</li>
+                  <li>Chemistry I</li>
+               </ul>
+         </div>
+
+         <div class="course">
+         <h3>Major in Computer Science</h3>
+         <div class="course-table">
+               <div class="course-row">
+                  <div class="course-name">Software Design</div>
+                  <div class="course-skill">Java, PlantUML</div>
+               </div>
+               <div class="course-row">
+                  <div class="course-name">Web Programming</div>
+                  <div class="course-skill">HTML, CSS, JavaScript, Frameworks</div>
+               </div>
+               <div class="course-row">
+                  <div class="course-name">Programming Language Concepts</div>
+                  <div class="course-skill">Scheme, Racket</div>
+               </div>
+               <div class="course-row">
+                  <div class="course-name">Machine Learning</div>
+                  <div class="course-skill">Python</div>
+               </div>
+               <div class="course-row">
+                  <div class="course-name">Computer Architecture I, II</div>
+                  <div class="course-skill">Verilog, ARM</div>
+               </div>
+               <div class="course-row">
+                  <div class="course-name">Database Systems</div>
+                  <div class="course-skill">SQL</div>
+               </div>
+               <div class="course-row">
+                  <div class="course-name">Software Requirements Engineering</div>
+                  <div class="course-skill">Software Engineering Practices</div>
+               </div>
+               <div class="course-row">
+                  <div class="course-name">Software Program Understanding</div>
+                  <div class="course-skill">R, TypeScript, Python</div>
+               </div>
+               <div class="course-row">
+                  <div class="course-name">Data Structures & Algorithm Analysis</div>
+                  <div class="course-skill">Java</div>
+               </div>
+               <div class="course-row">
+                  <div class="course-name">Object-Oriented Software Development</div>
+                  <div class="course-skill">Java</div>
+               </div>
+               <div class="course-row">
+                  <div class="course-name">Systems Programming</div>
+                  <div class="course-skill">C, C++, C#, ARM</div>
+               </div>
+               <div class="course-row">
+                  <div class="course-name">Software Development</div>
+                  <div class="course-skill">Python</div>
+               </div>
+               <div class="course-row">
+                  <div class="course-name">Digital Systems</div>
+                  <div class="course-skill">Circuits, Verilog</div>
+               </div>
+               
+         </div>
+      </div>
+
+         <div class="course">
+         <h3>Other Courses</h3>
+         <ul class="single-column">
+               <li>Technical Communication</li>
+               <li>Practical Security</li>
+               <li>Programming in the Community</li>
+               <li>Entrepreneurship</li>
+               <li>Geology</li>
+               <li>Personal Finance</li>
+         </ul>
+         </div>
+
+      </div>
+   </div>
+
+
+    <footer>
+      <h2>Contact Me!</h2>
+      <!-- <hr class="footer-line"> -->
+      <div class="footer-container">
+         <div class="footer-icons">
+            <a href="mailto:raitovn@rose-hulman.edu" target="_blank">
+                  <img src="images/mail-icon.png" alt="Email" class="icon">
+            </a>
+            <a href="https://github.com/rhit-raitovn" target="_blank">
+                  <img src="images/github-icon.png" alt="GitHub" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/naziia-raitova" target="_blank">
+                  <img src="images/linkedin-icon2.png" alt="LinkedIn" class="icon">
+            </a>
+         </div>
+         <p><a href="mailto:raitovn@rose-hulman.edu">raitovn@rose-hulman.edu</a></p>
+         <p>(224) 373-4204</p>
+      </div>
+   </footer>
+
 </body>
 </html>
