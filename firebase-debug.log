@@ -1,30 +1,13 @@
-[debug] [2025-03-08T21:24:22.033Z] ----------------------------------------------------------------------
-[debug] [2025-03-08T21:24:22.037Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\raitovn\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
-[debug] [2025-03-08T21:24:22.037Z] CLI Version:   12.7.0
-[debug] [2025-03-08T21:24:22.038Z] Platform:      win32
-[debug] [2025-03-08T21:24:22.038Z] Node Version:  v23.1.0
-[debug] [2025-03-08T21:24:22.038Z] Time:          Sat Mar 08 2025 16:24:22 GMT-0500 (Eastern Standard Time)
-[debug] [2025-03-08T21:24:22.038Z] ----------------------------------------------------------------------
+[debug] [2025-03-10T00:56:28.851Z] ----------------------------------------------------------------------
+[debug] [2025-03-10T00:56:28.853Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\raitovn\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-03-10T00:56:28.853Z] CLI Version:   13.33.0
+[debug] [2025-03-10T00:56:28.853Z] Platform:      win32
+[debug] [2025-03-10T00:56:28.853Z] Node Version:  v23.1.0
+[debug] [2025-03-10T00:56:28.854Z] Time:          Sun Mar 09 2025 20:56:28 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-03-10T00:56:28.854Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2025-03-08T21:24:22.046Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[info] Already logged in as raitovanazia@gmail.com
-[debug] [2025-03-08T21:24:32.128Z] Error: Timed out.
-    at Timeout._onTimeout (C:\Users\raitovn\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:254:49)
-    at listOnTimeout (node:internal/timers:614:17)
-    at process.processTimers (node:internal/timers:549:7)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2025-03-08T21:24:41.007Z] ----------------------------------------------------------------------
-[debug] [2025-03-08T21:24:41.010Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\raitovn\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2025-03-08T21:24:41.011Z] CLI Version:   12.7.0
-[debug] [2025-03-08T21:24:41.011Z] Platform:      win32
-[debug] [2025-03-08T21:24:41.011Z] Node Version:  v23.1.0
-[debug] [2025-03-08T21:24:41.011Z] Time:          Sat Mar 08 2025 16:24:41 GMT-0500 (Eastern Standard Time)
-[debug] [2025-03-08T21:24:41.011Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2025-03-08T21:24:41.017Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2025-03-08T21:24:41.071Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2025-03-08T21:24:41.071Z] > authorizing via signed-in user (raitovanazia@gmail.com)
+[debug] [2025-03-10T00:56:28.988Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-10T00:56:28.988Z] > authorizing via signed-in user (raitovanazia@gmail.com)
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -36,9 +19,10 @@ You're about to initialize a Firebase project in this directory:
 
   C:\Users\raitovn\Portfolio-CSSE280\raitovn.github.io
 
-[debug] [2025-03-08T21:25:02.134Z] *** [apiv2] error from fetch(https://firebase-public.firebaseio.com/cli.json, {"headers":{},"method":"GET"}): FetchError: request to https://firebase-public.firebaseio.com/cli.json failed, reason: connect ETIMEDOUT 2600:1901:0:4d00:::443
-[warn] !  Unable to fetch the CLI MOTD and remote config. 
-[debug] [2025-03-08T21:25:02.137Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
 [info] 
 === Project Setup
 [info] 
@@ -46,26 +30,50 @@ You're about to initialize a Firebase project in this directory:
 [info] You can create multiple project aliases by running firebase use --add, 
 [info] but for now we'll just set up a default project.
 [info] 
-[debug] [2025-03-08T21:25:16.337Z] > refreshing access token with scopes: []
-[debug] [2025-03-08T21:25:16.340Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-03-08T21:25:16.340Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-03-08T21:25:16.618Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
-[debug] [2025-03-08T21:25:16.618Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-03-08T21:25:16.619Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
-[debug] [2025-03-08T21:25:46.624Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects?pageSize=100, {"headers":{},"method":"GET","signal":{}}): AbortError: The user aborted a request.
-[debug] [2025-03-08T21:25:46.625Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects?pageSize=100
-[debug] [2025-03-08T21:25:51.646Z] Error: Timed out.
-    at Timeout._onTimeout (C:\Users\raitovn\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:254:49)
-    at listOnTimeout (node:internal/timers:614:17)
-    at process.processTimers (node:internal/timers:549:7)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2025-03-08T21:26:41.773Z] ----------------------------------------------------------------------
-[debug] [2025-03-08T21:26:41.776Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\raitovn\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2025-03-08T21:26:41.776Z] CLI Version:   12.7.0
-[debug] [2025-03-08T21:26:41.776Z] Platform:      win32
-[debug] [2025-03-08T21:26:41.777Z] Node Version:  v23.1.0
-[debug] [2025-03-08T21:26:41.777Z] Time:          Sat Mar 08 2025 16:26:41 GMT-0500 (Eastern Standard Time)
-[debug] [2025-03-08T21:26:41.777Z] ----------------------------------------------------------------------
+[debug] [2025-03-10T00:56:34.101Z] Using project from CLI flag: raitovn-csse280
+[debug] [2025-03-10T00:56:34.102Z] Checked if tokens are valid: true, expires at: 1741571780702
+[debug] [2025-03-10T00:56:34.102Z] Checked if tokens are valid: true, expires at: 1741571780702
+[debug] [2025-03-10T00:56:34.103Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/raitovn-csse280 [none]
+[debug] [2025-03-10T00:56:34.295Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/raitovn-csse280 200
+[debug] [2025-03-10T00:56:34.295Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/raitovn-csse280 {"projectId":"raitovn-csse280","projectNumber":"937117568722","displayName":"raitovn CSSE280","name":"projects/raitovn-csse280","resources":{"hostingSite":"raitovn-csse280"},"state":"ACTIVE","etag":"1_7e4a2b18-78f6-4f36-8a86-cc2d720b2803"}
+[info] i  Using project raitovn-csse280 (raitovn CSSE280) 
+[info] 
+=== Hosting Setup
+[debug] [2025-03-10T00:56:34.304Z] Checked if tokens are valid: true, expires at: 1741571780702
+[debug] [2025-03-10T00:56:34.304Z] Checked if tokens are valid: true, expires at: 1741571780702
+[debug] [2025-03-10T00:56:34.304Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/raitovn-csse280 [none]
+[debug] [2025-03-10T00:56:34.402Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/raitovn-csse280 200
+[debug] [2025-03-10T00:56:34.402Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/raitovn-csse280 {"projectId":"raitovn-csse280","projectNumber":"937117568722","displayName":"raitovn CSSE280","name":"projects/raitovn-csse280","resources":{"hostingSite":"raitovn-csse280"},"state":"ACTIVE","etag":"1_7e4a2b18-78f6-4f36-8a86-cc2d720b2803"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-03-10T00:58:05.284Z] ----------------------------------------------------------------------
+[debug] [2025-03-10T00:58:05.286Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\raitovn\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js use --add
+[debug] [2025-03-10T00:58:05.287Z] CLI Version:   13.33.0
+[debug] [2025-03-10T00:58:05.287Z] Platform:      win32
+[debug] [2025-03-10T00:58:05.287Z] Node Version:  v23.1.0
+[debug] [2025-03-10T00:58:05.287Z] Time:          Sun Mar 09 2025 20:58:05 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-03-10T00:58:05.287Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2025-03-08T21:26:41.783Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-03-10T00:58:05.419Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-10T00:58:05.419Z] > authorizing via signed-in user (raitovanazia@gmail.com)
+[debug] [2025-03-10T00:58:05.420Z] Checked if tokens are valid: true, expires at: 1741571780702
+[debug] [2025-03-10T00:58:05.420Z] Checked if tokens are valid: true, expires at: 1741571780702
+[debug] [2025-03-10T00:58:05.421Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-03-10T00:58:13.417Z] ----------------------------------------------------------------------
+[debug] [2025-03-10T00:58:13.419Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\raitovn\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js use --add
+[debug] [2025-03-10T00:58:13.420Z] CLI Version:   13.33.0
+[debug] [2025-03-10T00:58:13.420Z] Platform:      win32
+[debug] [2025-03-10T00:58:13.420Z] Node Version:  v23.1.0
+[debug] [2025-03-10T00:58:13.420Z] Time:          Sun Mar 09 2025 20:58:13 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-03-10T00:58:13.420Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-10T00:58:13.553Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-10T00:58:13.554Z] > authorizing via signed-in user (raitovanazia@gmail.com)
+[debug] [2025-03-10T00:58:13.555Z] Checked if tokens are valid: true, expires at: 1741571780702
+[debug] [2025-03-10T00:58:13.555Z] Checked if tokens are valid: true, expires at: 1741571780702
+[debug] [2025-03-10T00:58:13.555Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-03-10T00:58:13.819Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-03-10T00:58:13.819Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]

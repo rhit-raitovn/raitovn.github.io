@@ -9,4 +9,3 @@ document.addEventListener("DOMContentLoaded", function () {
 function scrollToFooter() {
     document.getElementById("contact-footer").scrollIntoView({ behavior: "smooth" });
 }
-
